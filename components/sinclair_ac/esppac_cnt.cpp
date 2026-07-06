@@ -458,7 +458,7 @@ void SinclairACCNT::send_packet()
         display_mode = protocol::REPORT_DISP_MODE_ACT;
         this->display_power_internal_ = true;
     }
-    else if (this->display_state_ == display_options::OUT_TEMP)
+    else if (this->display_state_ == display_options::OUT)
     {
         display_mode = protocol::REPORT_DISP_MODE_OUT;
         this->display_power_internal_ = true;
@@ -479,7 +479,7 @@ void SinclairACCNT::send_packet()
         {
             display_mode = protocol::REPORT_DISP_MODE_ACT;
         }
-        else if (this->display_mode_internal_ == display_options::OUT_TEMP)
+        else if (this->display_mode_internal_ == display_options::OUT)
         {
             display_mode = protocol::REPORT_DISP_MODE_OUT;
         }
@@ -969,7 +969,7 @@ std::string SinclairACCNT::determine_display()
             this->display_mode_internal_ = display_options::ACT;
             break;
         case protocol::REPORT_DISP_MODE_OUT:
-            this->display_mode_internal_ = display_options::OUT_TEMP;
+            this->display_mode_internal_ = display_options::OUT;
             break;
         default:
             ESP_LOGW(TAG, "Received unknown display mode");
