@@ -32,7 +32,7 @@ namespace fan_modes{
 
 /* this must be same as HORIZONTAL_SWING_OPTIONS in climate.py */
 namespace horizontal_swing_options{
-    const std::string OFF_SW  = "0 - OFF";
+    const std::string OFF  = "0 - OFF";
     const std::string FULL   = "1 - Swing - Full";
     const std::string CLEFT  = "2 - Constant - Left";
     const std::string CMIDL  = "3 - Constant - Mid-Left";
@@ -43,7 +43,7 @@ namespace horizontal_swing_options{
 
 /* this must be same as VERTICAL_SWING_OPTIONS in climate.py */
 namespace vertical_swing_options{
-    const std::string OFF_SW = "00 - OFF";
+    const std::string OFF = "00 - OFF";
     const std::string FULL  = "01 - Swing - Full";
     const std::string DOWN  = "02 - Swing - Down";
     const std::string MIDD  = "03 - Swing - Mid-Down";
@@ -59,7 +59,7 @@ namespace vertical_swing_options{
 
 /* this must be same as DISPLAY_OPTIONS in climate.py */
 namespace display_options{
-    const std::string OFF_SW = "0 - OFF";
+    const std::string OFF = "0 - OFF";
     const std::string AUTO = "1 - Auto";
     const std::string SET  = "2 - Set temperature";
     const std::string ACT  = "3 - Actual temperature";
