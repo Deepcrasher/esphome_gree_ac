@@ -7,6 +7,12 @@
 #include "esphome/components/switch/switch.h"
 #include "esphome/components/uart/uart.h"
 #include "esphome/core/component.h"
+#ifdef OFF
+#undef OFF
+#endif
+#ifdef OUT
+#undef OUT
+#endif  
 
 namespace esphome {
 
@@ -32,9 +38,6 @@ namespace fan_modes{
 
 /* this must be same as HORIZONTAL_SWING_OPTIONS in climate.py */
 namespace horizontal_swing_options{
-    #ifdef OFF
-    #undef OFF
-    #endif
     const std::string OFF  = "0 - OFF";
     const std::string FULL   = "1 - Swing - Full";
     const std::string CLEFT  = "2 - Constant - Left";
@@ -46,9 +49,6 @@ namespace horizontal_swing_options{
 
 /* this must be same as VERTICAL_SWING_OPTIONS in climate.py */
 namespace vertical_swing_options{    
-    #ifdef OFF
-    #undef OFF
-    #endif
     const std::string OFF = "00 - OFF";
     const std::string FULL  = "01 - Swing - Full";
     const std::string DOWN  = "02 - Swing - Down";
@@ -65,16 +65,10 @@ namespace vertical_swing_options{
 
 /* this must be same as DISPLAY_OPTIONS in climate.py */
 namespace display_options{
-    #ifdef OFF
-    #undef OFF
-    #endif    
     const std::string OFF = "0 - OFF";
     const std::string AUTO = "1 - Auto";
     const std::string SET  = "2 - Set temperature";
-    const std::string ACT  = "3 - Actual temperature";
-    #ifdef OUT
-    #undef OUT
-    #endif    
+    const std::string ACT  = "3 - Actual temperature";  
     const std::string OUT  = "4 - Outside temperature";
 }
 
