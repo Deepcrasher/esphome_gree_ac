@@ -72,7 +72,10 @@ namespace display_options{
     const std::string AUTO = "1 - Auto";
     const std::string SET  = "2 - Set temperature";
     const std::string ACT  = "3 - Actual temperature";
-    const std::string OUT_TEMP  = "4 - Outside temperature";
+    #ifdef OUT
+    #undef OUT
+    #endif    
+    const std::string OUT  = "4 - Outside temperature";
 }
 
 /* this must be same as DISPLAY_UNIT_OPTIONS in climate.py */
